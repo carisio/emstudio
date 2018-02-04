@@ -1,0 +1,4 @@
+Compilar o arquivo de recursos usando o seguinte comando:
+
+windres -iresource.rc -oresource.o -IC:\wxWidgets-3.0.3\include
+

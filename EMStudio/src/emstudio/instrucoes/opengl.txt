@@ -1,0 +1,23 @@
+Para instalar a openGL com o MinGW.
+
+Sistemas em 32 bits:
+
+1 - Linkar a biblioteca wxmsw29ud_gl (propriedades do projeto > settings > tool settings > mingw C++ linker).
+2 - Linkar a biblioteca opengl32. Observação: Este arquivo deve aparecer na listagem APÓS wxmsw29ud_gl.
+
+Caso seja necessário utilizar a GLU e GLUT, primeiro tem que fazer o download da GLUT no endereço http://www.xmission.com/~nate/glut.html . Copiar os arquivos seguintes para:
+
+No caso da compilação em 32 bits:
+copiar glut32.dll para c:\windows\system32 (windows xp) ou C:\Windows\SysWOW64 (windows 7)
+copiar glut32.lib para c:\mingw\lib
+copiar glut.h para c:\mingw\include\gl
+
+Em seguida, linkar as bibliotecas glu32 e glut32. Nesse projeto provavelmente não será necessário a glut32, visto que a interface é gerenciada pelo wxWidgets.
+
+Sistemas em 64 bits:
+
+1 - Mesmo procedimento anterior, mas tem que baixar as versões 64 bits das bibliotecas. Endereços:
+	- http://stackoverflow.com/questions/1236670/how-to-make-opengl-apps-in-64-bits-windows
+	- http://msdn.microsoft.com/en-us/windows/bb980924.aspx
+	- http://www.cs.uregina.ca/Links/class-info/315/WWW/Lab1/GLUT/windows.html
+	- http://www.transmissionzero.co.uk/software/freeglut-devel/

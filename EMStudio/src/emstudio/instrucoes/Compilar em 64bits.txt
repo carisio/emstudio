@@ -1,0 +1,37 @@
+1) Baixar um compilador compatível. Possibilidades:
+	- MinGW64
+	- TDM (inclui o MinGW e o MinGW64)
+
+2) Compilar novamente o arquivo de recursos. Nesse caso, é necessário incluir no arquivo a variável WX_CPU_AMD64 (#define WX_CPU_AMD64)
+	
+3) Compilar novamente o projeto:
+	- Entrar na pasta c:\wxWidgets-x.y.z\build\msw
+	- Digitar os comandos: 
+		mingw32-make -f makefile.gcc BUILD=debug SHARED=0 UNICODE=1 USE_ODBC=1
+		mingw32-make -f makefile.gcc BUILD=release SHARED=0 UNICODE=1 USE_ODBC=1
+	- Obs.: Os comandos acima funcionam no TDM que já compila direto em 64 bits. ACHO que para o MinGW64 é necessário usar a flag -m64, caso contrário a compilação padrão é em 32 bits
+
+4) A versão 4.7 do GCC gera alguns erros no arquivo wxStrcoll.h, como os listados abaixo. Para resolver isso, alterar o código desse arquivo (pasta include):
+	- DE  : #if !(defined(__VISUALC__) || wxCHECK_GCC_VERSION(3,5)) || defined(__clang__) 
+	- PARA: #if !(defined(__VISUALC__) || (wxCHECK_GCC_VERSION(3,5) && !wxCHECK_GCC_VERSION(4,7))) || defined(__clang__) 
+	- 
+	- Fonte 1: https://groups.google.com/forum/?fromgroups#!msg/wx-users/Z-ybIw4vors/RQFib2BZWP8J
+	- Fonte 2: http://trac.wxwidgets.org/attachment/ticket/13385/gcc-4.7-name-lookup.patch  
+
+In file included from ..\..\include/wx/crt.h:20:0,
+                 from ..\..\include/wx/string.h:4333,
+                 from ..\..\include/wx/memory.h:16,
+                 from ..\..\include/wx/object.h:20,
+                 from ..\..\include/wx/utils.h:19,
+                 from ..\..\include/wx/vector.h:31,
+                 from ../../src/stc/scintilla/src/Selection.h:134,
+                 from ../../src/stc/scintilla/src/Editor.cxx:41:
+..\..\include/wx/wxcrt.h: In instantiation of 'int wxStrcoll_String(const wxString&, const T&) [with T = const wchar_t*]':
+..\..\include/wx/wxcrt.h:497:1:   required from here
+..\..\include/wx/wxcrt.h:488:53: error: 'wxStrcoll' was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+..\..\include/wx/wxcrt.h:497:1: note: 'int wxStrcoll(const wxScopedWCharBuffer&, const wxString&)' declared here, later in the translation unit
+..\..\include/wx/wxcrt.h: In instantiation of 'int wxStrcoll_String(const wxString&, const T&) [with T = const char*]':
+..\..\include/wx/wxcrt.h:497:1:   required from here
+..\..\include/wx/wxcrt.h:488:53: error: 'wxStrcoll' was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+..\..\include/wx/wxcrt.h:497:1: note: 'int wxStrcoll(const wxScopedWCharBuffer&, const wxString&)' declared here, later in the translation unit
+mingw32-make: *** [gcc_mswu\wxscintilla_Editor.o] Error 1

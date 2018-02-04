@@ -1,0 +1,77 @@
+1) Download softwares:
+	- Eclipse for C++: https://www.eclipse.org
+	- TDM 64: http://tdm-gcc.tdragon.net/
+	- wxWidgets: https://www.wxwidgets.org/
+
+2) Extraia o eclipse (requer JRE) e o wxWidgets e instale o TDM 64
+
+3) Compile o wxWidgets executando os comandos:
+	C:\wxWidgets-3.0.2\build\msw>mingw32-make -f makefile.gcc BUILD=debug SHARED=0 UNICODE=1 CXXFLAGS=-std=gnu++11 -Wall
+	C:\wxWidgets-3.0.2\build\msw>mingw32-make -f makefile.gcc BUILD=release SHARED=0 UNICODE=1 CXXFLAGS=-std=gnu++11 -Wall
+
+4) Baixar opengl no endereço http://www.transmissionzero.co.uk/software/freeglut-devel/
+	- Os arquivos da opengl 64 bits estão no Windows SDK. Endereço para Windows 7 [1]. Endereço para Windows 8 [2].
+	- Alguns links interessantes: [3] 
+	- Caso seja necessário utilizar a GLU e GLUT, primeiro tem que fazer o download da GLUT no endereço [3] (compilar 32 bits) ou no [4] (tem versão 32 e 64 bits) . Copiar os arquivos seguintes para:
+		No caso da glut (apenas 32 bits):
+			copiar glut32.dll para c:\windows\system32 (windows xp) ou C:\Windows\SysWOW64 (windows 7 ou 8)
+			copiar glut32.lib para c:\mingw\lib
+			copiar glut.h para c:\mingw\include\gl
+		No caso da freeglut, copiar a dll, lib e .h para as mesmas pastas acima.
+	- Quando for linkar a opengl:
+		1 - Linkar a biblioteca wxmsw30u_gl (propriedades do projeto > settings > tool settings > mingw C++ linker).
+		2 - Linkar a biblioteca opengl32. Observação: Este arquivo deve aparecer na listagem APÓS wxmsw30u_gl. A lib está dentro do diretório lib de instação do Windows SDK. Ver [5]
+
+	[1] - http://www.microsoft.com/en-us/download/confirmation.aspx?id=8279
+	[2] - https://msdn.microsoft.com/pt-br/windows/desktop/hh852363.aspx
+	[3] - http://www.xmission.com/~nate/glut.html
+	[4] - http://www.transmissionzero.co.uk/software/freeglut-devel/
+	[5] - http://stackoverflow.com/questions/1236670/how-to-make-opengl-apps-in-64-bits-windows
+
+5) Compilar o arquivo de recursos: windres -iresource.rc -oresource.o -IC:\wxWidgets-3.0.2\include
+
+6) No Eclipse, criar um projeto. 
+	1) Acessar suas propriedades > C/C++ Buil > Includes. Inserir as pastas: 
+	- "${workspace_loc:/${ProjName}/src}"
+	- "${workspace_loc:/${ProjName}/src/emstudio/util/file/msgpack}"
+	- "C:\wxWidgets-3.0.2\lib\gcc_lib\mswu"
+	- "C:\wxWidgets-3.0.2\lib\gcc_lib\"
+	- "C:\wxWidgets-3.0.2\include"
+
+	2) Acessar suas propriedades > MinGW C++ Linker > Libraries. Adicionar:
+		wxmsw30u_xrc
+		wxmsw30u_gl
+		opengl32
+		glu32
+		freeglut
+		wxmsw30u_richtext
+		wxbase30u_net
+		wxmsw30u_propgrid
+		wxmsw30u_media
+		wxmsw30u_aui
+		wxmsw30u_html
+		wxmsw30u_adv
+		wxbase30u_xml
+		wxmsw30u_core
+		wxbase30u
+		wxtiff
+		wxjpeg
+		wxpng
+		wxzlib
+		wxregexu
+		wxexpat
+		kernel32
+		user32
+		gdi32
+		comdlg32
+		winspool
+		winmm
+		shell32
+		comctl32
+		ole32
+		oleaut32
+		uuid
+		rpcrt4
+		advapi32
+		wsock32
+		odbc32

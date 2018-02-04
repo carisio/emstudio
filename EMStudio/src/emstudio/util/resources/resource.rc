@@ -1,0 +1,67 @@
+#define WX_CPU_AMD64
+
+aaaaaaaa ICON "icons/ems.ico"
+
+// this icon is used with wxFrame::SetIcon()
+appicon ICON "icons/ems.ico"
+
+// set this to 1 if you don't want to use manifest resource (manifest resource
+// is needed to enable visual styles on Windows XP - see docs/msw/winxp.txt
+// for more information)
+#define wxUSE_NO_MANIFEST 0
+
+box ICON "icons/elements/box.ico"
+cylinder ICON "icons/elements/cylinder.ico"
+deltagap ICON "icons/elements/deltagap.ico"
+dipole ICON "icons/elements/dipole.ico"
+fdtd ICON "icons/elements/fdtd.ico"
+fieldatpath ICON "icons/elements/fieldatpath.ico"
+fieldatpoint ICON "icons/elements/fieldatpoint.ico"
+fieldatplane ICON "icons/elements/fieldatplane.ico"
+microstrip ICON "icons/elements/microstrip.ico"
+monopole ICON "icons/elements/monopole.ico"
+planewave ICON "icons/elements/planewave.ico"
+radiationpattern ICON "icons/elements/radiationpattern.ico"
+rectangularpecsheet ICON "icons/elements/rectangularpecsheet.ico"
+genericpecsheet ICON "icons/elements/genericpecsheet.ico"
+circularpecsheet ICON "icons/elements/circularpecsheet.ico"
+sphere ICON "icons/elements/sphere.ico"
+thinwire ICON "icons/elements/thinwire.ico"
+helix ICON "icons/elements/helix.ico"
+toroid ICON "icons/elements/toroid.ico"
+circulartube ICON "icons/elements/circulartube.ico"
+rectangulartube ICON "icons/elements/rectangulartube.ico"
+
+methods ICON "icons/elementtype/method.ico"
+objects2d ICON "icons/elementtype/object2d.ico"
+objects3d ICON "icons/elementtype/object3d.ico"
+probes ICON "icons/elementtype/probe.ico"
+sources ICON "icons/elementtype/source.ico"
+
+camauto ICON "icons/toolbar/camauto.ico"
+camxy ICON "icons/toolbar/camxy.ico"
+camxz  ICON "icons/toolbar/camxz.ico"
+camyz ICON "icons/toolbar/camyz.ico"
+clone ICON "icons/toolbar/clone.ico"
+delete ICON "icons/toolbar/delete.ico"
+library ICON "icons/toolbar/library.ico"
+symbol ICON "icons/toolbar/symbol.ico"
+new ICON "icons/toolbar/new.ico"
+open ICON "icons/toolbar/open.ico"
+results ICON "icons/toolbar/results.ico"
+save ICON "icons/toolbar/save.ico"
+simulate ICON "icons/toolbar/simulate.ico"
+units ICON "icons/toolbar/units.ico"
+rotate ICON "icons/toolbar/rotate.ico"
+move ICON "icons/toolbar/move.ico"
+zoom ICON "icons/toolbar/zoom.ico"
+
+table ICON "icons/results/table.ico"
+chart ICON "icons/results/chart.ico"
+
+directionPlaneWave BITMAP "bitmaps/directionPlaneWave.bmp"
+about BITMAP "bitmaps/about.bmp"
+
+// this is not always needed but doesn't hurt (except making the executable
+// very slightly larger): this file contains the standard icons, cursors, ...
+#include "wx/msw/wx.rc"
