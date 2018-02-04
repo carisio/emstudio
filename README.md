@@ -1,7 +1,7 @@
 # EM Studio
 EM Studio is a free Electromagnetic Field Simulation software for Windows based on the Finite Difference Time Domain (FDTD) method.
 
-To use EM Studio, download and extract `emstudio.rar`. Then, run `EMStudio.exe`.
+To use EM Studio, download and extract `emstudio.rar`. Then, run `EMStudio.exe`. You can also find the binaries files at https://github.com/carisio/emstudio/releases/ .
 
 For a brief tutorial, see the samples projects section.
 
