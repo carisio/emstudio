@@ -10,6 +10,8 @@ Cite this project as:
 
 ## Samples projects
 
+[1 - Monopole mounted on a conducting rectangular box](samples/monopole_mounted_on_a_conducting_box/monopole_mounted_on_a_conducting_box.md)
+
 ## Compiling EM Studio
 The source code of EM Studio is also available. This section shows how to compile it. It considers that you are running 64-bit version of Windows.
 
