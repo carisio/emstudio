@@ -4,7 +4,7 @@
 
 This sample replicates the results from the paper[FDTD method analysis of a monopole antenna mounted on a conducting rectangular area][1], published in the Antennas and Propagation Society International Symposion, 1992.
 
-In this paper, the authors simulated a monopole antenna attached to a conducting rectangular box using the FDTD method. The box has a cross section of dimension a $\times$ b and height c (a = 60 mm, b = 10 mm, and c = 50 mm). In the top of the conducting box, at the center, there is a monopole of height h and radius r (h = 50 mm and r = 0.5 mm). The FDTD grid has $\Delta$x = $\Delta$y = $\Delta$z = 1.67 mm and 110 $\times$ 90 $\times$ 180 cells. The source of the monopole is a Gaussian pulse.
+In this paper, the authors simulated a monopole antenna attached to a conducting rectangular box using the FDTD method. The box has a cross section of dimension a x b and height c (a = 60 mm, b = 10 mm, and c = 50 mm). In the top of the conducting box, at the center, there is a monopole of height h and radius r (h = 50 mm and r = 0.5 mm). The FDTD grid has delta_x = delta_y = delta_z = 1.67 mm and 110 x 90 x 180 cells. The source of the monopole is a Gaussian pulse.
 
 With this data, the authors calculated the input impedance for frequencies below 6 GHz and the the radiation pattern at 1.5 GHz.
 
