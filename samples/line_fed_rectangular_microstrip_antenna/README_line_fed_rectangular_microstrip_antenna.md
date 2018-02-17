@@ -12,7 +12,7 @@ The problem consists in calculate the S11 of this antenna for frequencies below 
 
 Fig. 1 - Problem definition - [Source of the figure][1].
 
-[You can download the project file in EM Studio here.](prj_monopole_mounted_on_a_conducting_box.emstudio)
+[You can download the project file in EM Studio here.](prj_line_fed_rectangular_microstrip_antenna.emstudio)
 
 ## Configuring the project in EM Studio
 

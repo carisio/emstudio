@@ -11,6 +11,7 @@ Cite this project as:
 ## Samples projects
 
 [1 - Monopole mounted on a conducting rectangular box](samples/monopole_mounted_on_a_conducting_box/README_monopole_mounted_on_a_conducting_box.md)
+
 [2 - Line-fed rectangular microstrip antenna](samples/line_fed_rectangular_microstrip_antenna/README_line_fed_rectangular_microstrip_antenna.md)
 
 ## Compiling EM Studio
@@ -32,15 +33,15 @@ You will need a set of tools:
 	- To build, open a console Windows (`cmd`) and execute the following commands (this process can take some time):
 		- `cd C:\wxWidgets-3.0.2\build\msw`
 		- `mingw32-make -f makefile.gcc BUILD=release SHARED=0 UNICODE=1 USE_OPENGL=1 CXXFLAGS=-std=gnu++11 -Wall`
- 		- `mingw32-make -f makefile.gcc BUILD=debug SHARED=0 UNICODE=1 USE_OPENGL=1 CXXFLAGS=-std=gnu++11 -Wall`
+			- `mingw32-make -f makefile.gcc BUILD=debug SHARED=0 UNICODE=1 USE_OPENGL=1 CXXFLAGS=-std=gnu++11 -Wall`
 
 3. Configure OpenGL libraries:
 	- Download freeglut 3.0.0 MinGW Package, available at http://www.transmissionzero.co.uk/software/freeglut-devel/ .
 	- The file `freeglut-MinGW-3.0.0-1.mp.zip` has three folders: `freeglut\bin`, `freeglut\include`, and `freeglut\lib`.
 		- Copy the `GL` folder of `freeglut\include` to `c:\TDM-GCC-64\include`;
 		- Copy the files of `freeglut\lib\x64` to `C:\TDM-GCC-64\lib\gcc\x86_64-w64-mingw32\5.1.0`;
- 		- Copy the `freeglut.dll` file of `freeglut\bin\x64` to `c:\windows\system32`; You will need to register this dll. Open the console (`cmd`) and type `regsvr32 freeglut.dll`.
- 
+			- Copy the `freeglut.dll` file of `freeglut\bin\x64` to `c:\windows\system32`; You will need to register this dll. Open the console (`cmd`) and type `regsvr32 freeglut.dll`.
+
 4. Download an IDE
 	- In this tutorial we will consider the Eclipse IDE for C/C++ developers, available at https://www.eclipse.org/downloads/eclipse-packages/ .
 	- After download it, you just need to extract the zip file and run the file `eclipse.exe`to open it.
