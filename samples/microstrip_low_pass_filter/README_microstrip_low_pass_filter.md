@@ -1,18 +1,18 @@
-# Line-fed rectangular microstrip antenna
+# Microstrip low-pass filter
 
 [][1]
 
 This sample replicates one of the results from the paper [Application of the three-dimensional finite-difference time-domain method to the analysis of planar microstrip circuits][1], published in the IEEE Transactions on Microwave Theory and Techniques, vol. 38, no. 7, July 1990.
 
-In this paper, the authors simulated a line-fed rectangular microstrip antenna shown in Fig. 1. To simulate this problem, the authors used a FDTD grid with delta_x = 0.389 mm, delta_y = 0.400 mm, and delta_z = 0.265 mm. The grid has 60 x 100 x 16 cells. The rectangular antenna patch has dimensions 32 * delta_x and 40 * delta_y in the x and y axis. It is fed by a microstrip line of length 50 * delta_y.
+In this paper, the authors simulated a line-fed rectangular microstrip antenna shown in Fig. 1. To simulate this problem, the authors used a FDTD grid with delta_x = 0.4064 mm, delta_y = 0.4233 mm, and delta_z = 0.265 mm. The grid has 80 x 100 x 16 cells. The long rectangular patch has dimensions 50 * delta_x and 6 * delta_y in the x and y axis. The distance from the source plane to the edge of the long path is 50 * delta_y. The reference planes for ports 1 and 2 are 10 * delta_y from the edges of the patch. The strip widths of the ports 1 and 2 are 6 * delta_x.
 
-The problem consists in calculate the S11 of this antenna for frequencies below 20 GHz.
+The problem consists in calculate the S11 and S21 of this filter for frequencies below 20 GHz.
 
 ![Fig1 - project](figs/fig1.png)
 
 Fig. 1 - Problem definition - [Source of the figure][1].
 
-[You can download the project file in EM Studio here.](prj_line_fed_rectangular_microstrip_antenna.emstudio)
+[You can download the project file in EM Studio here.](prj_microstrip_low_pass_filter.emstudio)
 
 ## Configuring the project in EM Studio
 
@@ -43,11 +43,11 @@ Fig. 4 - Symbols
 Now, let's configure the FDTD grid. Double click at the FDTD icon in the project properties (section 1 of Fig. 1). Set the properties:
 
 - Lower Boundary: (0, 0, 0)
-- Upper Boundary: (60 * dx, 100 * dy, 16 * dz)
-- Number of Cells (X): 60
+- Upper Boundary: (80 * dx, 100 * dy, 16 * dz)
+- Number of Cells (X): 80
 - Number of Cells (Y): 100
 - Number of Cells (Z): 16
-- Time steps: 8000
+- Time steps: 4000
 - ABC: PML in all axis, with Npml = 8
 
 
@@ -69,19 +69,21 @@ Fig. 6 - Creating a new material.
 Now, double click the Microstrip icon in the Available items section (section 2 of Fig. 2). EM Studio will show the Microstrip properties. Set the properties:
 
 - Lower Boundary: (0, 0, 0)
-- Upper Boundary: (60 * dx, 100 * dy, 3 * dz)
+- Upper Boundary: (80 * dx, 100 * dy, 3 * dz)
 - Substrate: Eps_r = 2.2
-- Line position (X): (60 * dx - 32 * dx)/2 + 2.09 + 2.46/2
+- Line position (X): (80-50)*dx/2 + 5.65 + 2.413/2
 - Line length: 50 * dy
-- Line width: 2.46
-- Pec under substrate?: checked
-- Match with PML: unchecked
+- Line width: 2.413
+- Pec under substrate?: Checked
+- Match with PML: Checked (+Y)
 - Excitation: Gaussian with amplitude 1 and frequency 25
-- Ports: 0
+- Ports: 1
+  - Coordinate-X: 15 * dx + 50 * dx - 5.65 - 6 * dx + 3 * dx
+  - Coordinate-Y: 90 * dy
 - Line impedance: 50
 - Initial frequency: 0.5
-- Frequency step: (20-0.5)/500
-- N frequencies: 500
+- Frequency step: (20-0.5)/1000
+- N frequencies: 1000
 - Solid?: Unchecked
 - Visible?: Checked
 
@@ -93,13 +95,13 @@ Fig. 7 - Microstrip properties
 
 
 
-The microstrip has only a substrate and a fed-line. Now, double click Rectangular PEC sheet icon in the Available items section (section 2 of Fig. 2) to define the antenna. Set the properties:
+The microstrip has only a substrate and a fed-line. Now, double click Rectangular PEC sheet icon in the Available items section (section 2 of Fig. 2) to define the patch along the X-axis. Set the properties:
 
 - Dimensions: 
   - Cut at Plane: Z
   - z: 3 * dz
-  - x from (60 * dx - 32 * dx)/2 to (60 * dx - 32 * dx)/2 + 32 * dx
-  - y from 50 * dy to 50 * dy+40 * dy
+  - x from 15 * dx to 15 * dx + 50 * dx
+  - y from 50 * dy to 50 * dy + 6 * dy
 - Match with PML: Unchecked
 - Solid?: Unchecked
 - Visible?: Checked
@@ -112,32 +114,55 @@ Fig. 8 - Rectangular PEC Sheet properties
 
 
 
-The final project setup should be as shown in Fig. 9.
+Double click Rectangular PEC sheet icon again in the Available items section (section 2 of Fig. 2) to define the patch along the Y-axis. Set the properties:
 
-![Fig9 - Final project setup](figs/fig9.png)
+- Dimensions: 
+  - Cut at Plane: Z
+  - z: 3 * dz
+  - x from 15 * dx + 50 * dx -5.65 - 6 * dx to 15 * dx + 50 * dx -5.65
+  - y from 56 * dy to 100 * dy
+- Match with PML: Checked (+Y)
+- Solid?: Unchecked
+- Visible?: Checked
 
-Fig. 9 - Final project setup.
+Fig. 9 shows the Rectangular PEC Sheet properties. 
+
+![Fig9 - Rectangular PEC Sheet properties](figs/fig9.png)
+
+Fig. 9 - Rectangular PEC Sheet properties
+
+
+
+The final project setup should be as shown in Fig. 10.
+
+![Fig10 - Final project setup](figs/fig10.png)
+
+Fig. 10 - Final project setup.
 
 
 
 After this step, it is necessary to start the simulation. Use the menu `Simulate`>`Start` or the button `Simulate` in the toolbar. Depending on the size of the project, this step can take a while.
 
-The results are available through the menu `Simulate`>`Results` or the button `Results` in the toolbar. Fig. 10 and 11 show the results for S11 in plot and table format.
+The results are available through the menu `Simulate`>`Results` or the button `Results` in the toolbar. Fig. 11 and 12 show the results for S11 and S21 for this filter.
 
-![Fig10 - Simulation results - S11 - plot](figs/fig10.png)
+![Fig11 - Simulation results - S11](figs/fig11.png)
 
-Fig. 10 - Simulation results - S11 - plot.
+Fig. 11 - Simulation results - S11.
 
-![Fig11 - Simulation results - S11 - table](figs/fig11.png)
+![Fig12 - Simulation results - S21](figs/fig12.png)
 
-Fig. 11 - Simulation results - S11 - table.
+Fig. 12 - Simulation results - S12.
 
 
 
-Fig. 12 compares S11 calculated with EM Studio with S11 calculated from the reference. [You can download the files to generate Fig. 12 here.](comparison.rar)
+Fig. 13  and 14 compare S11 and S21 calculated with EM Studio and from the reference. [You can download the files to generate Fig. 13 and 14 here.](comparison.rar)
 
-![Fig12 - Comparison of S11](figs/fig12.png)
+![Fig13 - Comparison of S11](figs/fig13.png)
 
-Fig. 12 - S11 calculated with EM Studio and calculated in [the reference][1].
+Fig. 13 - S11 calculated with EM Studio and calculated in [the reference][1].
+
+![Fig14 - Comparison of S21](figs/fig14.png)
+
+Fig. 14 - S21 calculated with EM Studio and calculated in [the reference][1].
 
 [1]: https://doi.org/10.1109/22.55775

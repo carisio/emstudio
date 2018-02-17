@@ -6,13 +6,15 @@ To use EM Studio, download and extract `emstudio.rar`. Then, run `EMStudio.exe`.
 For a brief tutorial, see the samples projects section.
 
 Cite this project as:
-- Leandro Carísio Fernandes and Antonio José Martins Soares, *"Software Architecture for the Design of Electromagnetic Simulators [EM Programmer's Notebook]"*, IEEE Antennas and Propagation Magazine, Volume: 55, Issue: 1, Feb. 2013, DOI: 10.1109/MAP.2013.6474511. https://doi.org/10.1109/MAP.2013.6474511
+- Leandro Carísio Fernandes and Antonio José Martins Soares, *"Software Architecture for the Design of Electromagnetic Simulators [EM Programmer's Notebook]"*, IEEE Antennas and Propagation Magazine, Volume: 55, Issue: 1, Feb. 2013, DOI: [10.1109/MAP.2013.6474511][1].
 
 ## Samples projects
 
 [1 - Monopole mounted on a conducting rectangular box](samples/monopole_mounted_on_a_conducting_box/README_monopole_mounted_on_a_conducting_box.md)
 
 [2 - Line-fed rectangular microstrip antenna](samples/line_fed_rectangular_microstrip_antenna/README_line_fed_rectangular_microstrip_antenna.md)
+
+[3 - Microstrip low-pass filter](samples/microstrip_low_pass_filter/README_microstrip_low_pass_filter.md)
 
 ## Compiling EM Studio
 The source code of EM Studio is also available. This section shows how to compile it. It considers that you are running 64-bit version of Windows.
@@ -59,5 +61,9 @@ To compile EM Studio, follow these steps:
 
 4. In Eclipse, select your project, click in menu `Project` > `Build Project`.
 
-5. After the building process, depending on the build configuration (debug or release), the `EMStudio.exe` file will be at `EMS_FOLDER\release` or `EMS_FOLDER\debug`.
-	- Note: In the step 3 of the last section, if you didn't register `freeglut.dll`, you will need to copy this file to the same folder that `EMStudio.exe` is.
+5.  After the building process, depending on the build configuration (debug or release), the `EMStudio.exe` file will be at `EMS_FOLDER\release` or `EMS_FOLDER\debug`.
+  - Note: In the step 3 of the last section, if you didn't register `freeglut.dll`, you will need to copy this file to the same folder that `EMStudio.exe` is.
+
+
+
+[1]: https://doi.org/10.1109/MAP.2013.6474511
