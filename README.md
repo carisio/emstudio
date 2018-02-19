@@ -1,4 +1,4 @@
-# EM Studio
+# EM Studio ([exe file](https://github.com/carisio/emstudio/releases/))
 EM Studio is a free Electromagnetic Field Simulation software for Windows based on the Finite Difference Time Domain (FDTD) method.
 
 To use EM Studio, download and extract `emstudio.rar`. Then, run `EMStudio.exe`. You can also find the binaries files at https://github.com/carisio/emstudio/releases/ .
@@ -15,6 +15,8 @@ Cite this project as:
 [2 - Line-fed rectangular microstrip antenna](samples/line_fed_rectangular_microstrip_antenna/README_line_fed_rectangular_microstrip_antenna.md)
 
 [3 - Microstrip low-pass filter](samples/microstrip_low_pass_filter/README_microstrip_low_pass_filter.md)
+
+[3 - Propagation delay through dieletric slab](samples/propagation_delay_through_dieletric_slab/README_propagation_delay_through_dieletric_slab.md)
 
 ## Compiling EM Studio
 The source code of EM Studio is also available. This section shows how to compile it. It considers that you are running 64-bit version of Windows.

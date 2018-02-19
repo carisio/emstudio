@@ -1,4 +1,4 @@
-# Microstrip low-pass filter
+# Microstrip low-pass filter ([Project file](prj_microstrip_low_pass_filter.emstudio))
 
 [][1]
 
@@ -11,8 +11,6 @@ The problem consists in calculate the S11 and S21 of this filter for frequencies
 ![Fig1 - project](figs/fig1.png)
 
 Fig. 1 - Problem definition - [Source of the figure][1].
-
-[You can download the project file in EM Studio here.](prj_microstrip_low_pass_filter.emstudio)
 
 ## Configuring the project in EM Studio
 

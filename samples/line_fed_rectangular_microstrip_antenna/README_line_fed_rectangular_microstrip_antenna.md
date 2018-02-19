@@ -1,4 +1,4 @@
-# Line-fed rectangular microstrip antenna
+# Line-fed rectangular microstrip antenna ([Project file](prj_line_fed_rectangular_microstrip_antenna.emstudio))
 
 [][1]
 
@@ -11,8 +11,6 @@ The problem consists in calculate the S11 of this antenna for frequencies below 
 ![Fig1 - project](figs/fig1.png)
 
 Fig. 1 - Problem definition - [Source of the figure][1].
-
-[You can download the project file in EM Studio here.](prj_line_fed_rectangular_microstrip_antenna.emstudio)
 
 ## Configuring the project in EM Studio
 
