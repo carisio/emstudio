@@ -8,7 +8,7 @@ The problem consists of a plane wave aproaching a 5 cm dieletric slab (large eno
 
 Figure 1 shows the final project setup.
 
-
+ 
 
 ![Fig1 - project](figs/fig1.png)
 
