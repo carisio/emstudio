@@ -33,7 +33,7 @@ You will need a set of tools:
 
 2. EM Studio uses wxWidgets. It is necessary to download its source code and build it:
 	- In its current version, EM Studio is not compatible with the last version of wxWidgets (3.1.0). So, it is necessary to download the previous stable version (wxWidgets 3.0.3).
-	- You can download it at https://www.wxwidgets.org/downloads/ . Download the source code (Windows zip file) and extract it sources to `c:\wxWidgets-3.0.3` .
+	- You can download it at https://www.wxwidgets.org/downloads/ . Download the source code (Windows zip file) and extract it to `c:\wxWidgets-3.0.3` .
 	- To build, open a console Windows (`cmd`) and execute the following commands (this process can take some time):
 		- `cd C:\wxWidgets-3.0.2\build\msw`
 		- `mingw32-make -f makefile.gcc BUILD=release SHARED=0 UNICODE=1 USE_OPENGL=1 CXXFLAGS=-std=gnu++11 -Wall`
