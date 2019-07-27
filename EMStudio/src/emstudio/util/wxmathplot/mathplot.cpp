@@ -1703,7 +1703,7 @@ void mpWindow::OnSavePlot(wxCommandEvent& WXUNUSED(event))
 		wxString fileName = dialog.GetPath();
 		wxString fileNameLowerCase = fileName.Lower();
 
-		int type = wxBITMAP_TYPE_BMP;
+		wxBitmapType type = wxBITMAP_TYPE_BMP;
 		/**
 		 * TODO: TESTAR NO WINDOWS 7
 		if (fileNameLowerCase.EndsWith("png"))
@@ -2341,7 +2341,7 @@ void mpWindow::GetBoundingBox(double* bbox)
 	bbox[3] = m_maxY;
 }
 
-bool mpWindow::SaveScreenshot(const wxString& filename, int type, wxSize imageSize, bool fit)
+bool mpWindow::SaveScreenshot(const wxString& filename, wxBitmapType type, wxSize imageSize, bool fit)
 {
 	int sizeX, sizeY;
 	int bk_scrX, bk_scrY;
