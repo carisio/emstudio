@@ -32,10 +32,10 @@ You will need a set of tools:
 	- After install, add the bin folder path to Windows `PATH` variable. If you use the default folder, its path is `C:\TDM-GCC-64\bin` .
 
 2. EM Studio uses wxWidgets. It is necessary to download its source code and build it:
-	- In its current version, EM Studio is not compatible with the last version of wxWidgets (3.1.0). So, it is necessary to download the previous stable version (wxWidgets 3.0.3).
-	- You can download it at https://www.wxwidgets.org/downloads/ . Download the source code (Windows zip file) and extract it to `c:\wxWidgets-3.0.3` .
+	- This version was tested with wxWidgets 3.1.2.
+	- You can download it at https://www.wxwidgets.org/downloads/ . Download the source code (Windows zip file) and extract it to `c:\wxWidgets-3.1.2` .
 	- To build, open a console Windows (`cmd`) and execute the following commands (this process can take some time):
-		- `cd C:\wxWidgets-3.0.2\build\msw`
+		- `cd C:\wxWidgets-3.1.2\build\msw`
 		- `mingw32-make -f makefile.gcc BUILD=release SHARED=0 UNICODE=1 USE_OPENGL=1 CXXFLAGS=-std=gnu++11 -Wall`
 			- `mingw32-make -f makefile.gcc BUILD=debug SHARED=0 UNICODE=1 USE_OPENGL=1 CXXFLAGS=-std=gnu++11 -Wall`
 
@@ -55,11 +55,11 @@ To compile EM Studio, follow these steps:
 1.  Download or clone this repository. The EMStudio folder contains the Eclipse project for EM Studio.
 
 2. In Eclipse, click `File` > `Import...` > `Existing Projects into Workspace`. Select the folder that you extract or cloned this repository.
-	- Note: The project is configured considering the instalation of wxWidgets in `C:\wxWidgets-3.0.3`. If you are using a previous version of wxWidgets or if it is installed in other folder, you will need to open the project properties (right click on the project, select `Properties`). In C/C++ Build, change the variable `WX_PATH` to point to your wxWidgets folder;
+	- Note: The project is configured considering the instalation of wxWidgets in `C:\wxWidgets-3.1.2`. If you are using a previous version of wxWidgets or if it is installed in other folder, you will need to open the project properties (right click on the project, select `Properties`). In C/C++ Build, change the variable `WX_PATH` to point to your wxWidgets folder;
 
 3. All bitmap files are stored in a resource file. You will need to compile it before compile/link EM Studio. Open a console window (`cmd`), and run:
 	- `cd EMS_FOLDER\src\emstudio\util\resources` . Note: replace  EMS_FOLDER for the location where you extract the EM Studio project;
-	- `windres -iresource.rc -oresource.o -IC:\wxWidgets-3.0.3\include`
+	- `windres -iresource.rc -oresource.o -IC:\wxWidgets-3.1.2\include`
 
 4. In Eclipse, select your project, click in menu `Project` > `Build Project`.
 
