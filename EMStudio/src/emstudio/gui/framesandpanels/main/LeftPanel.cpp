@@ -75,7 +75,11 @@ void AvailableItemsTree::BuildTree() {
     	ElementManager::ElementList elementsInCategory = elementManager->GetElementList(type);
 
     	// Para cada chave (categoria), vincula à raiz
-    	int index = icons->Add(type->GetIcon());
+    	// Ícones no arquivo de recursos são de 32x32. Aqui estamos interessados em 16x16. Ajusta:
+    	wxBitmap icon = UtilResource::GetBitmapFromIcon(type->GetIcon());
+		wxBitmap::Rescale(icon, wxSize(16, 16));
+
+    	int index = icons->Add(icon);
     	wxTreeItemId categoryItemId = this->AppendItem(rootId, type->GetName(), index, index, new ItemsTree(type->GetName()));
 
     	// Pega a lista de elementos vinculados à esta categoria
@@ -84,7 +88,11 @@ void AvailableItemsTree::BuildTree() {
     	// Percorre a lista de elementos
     	while (iteratorList != elementsInCategory.end()) {
     		ElementGUISmartPointer element = *iteratorList;
-    		index = icons->Add(element->GetIcon());
+
+        	wxBitmap icon = UtilResource::GetBitmapFromIcon(element->GetIcon());
+    		wxBitmap::Rescale(icon, wxSize(16, 16));
+
+    		index = icons->Add(icon);
     		this->AppendItem(categoryItemId, element->GetRegisteredName(), index, index, new ItemsTree(element));
 
     		iteratorList++;
@@ -188,7 +196,9 @@ void ProjectTree::BuildTree() {
 		ElementManager::ElementList elementsInCategory = elementManager->GetElementList(type);
 
 		// Para cada chave (categoria), vincula à raiz
-		int index = icons->Add(type->GetIcon());
+    	wxBitmap icon = UtilResource::GetBitmapFromIcon(type->GetIcon());
+		wxBitmap::Rescale(icon, wxSize(16, 16));
+		int index = icons->Add(icon);
 		wxTreeItemId categoryItemId = this->AppendItem(rootId, type->GetName(), index, index, new ItemsTree(type->GetName()));
 
 		// Pega a lista de elementos vinculados à esta categoria
@@ -197,7 +207,9 @@ void ProjectTree::BuildTree() {
 		// Percorre a lista de elementos
 		while (iteratorList != elementsInCategory.end()) {
 			ElementGUISmartPointer element = *iteratorList;
-			index = icons->Add(element->GetIcon());
+			wxBitmap icon = UtilResource::GetBitmapFromIcon(element->GetIcon());
+			wxBitmap::Rescale(icon, wxSize(16, 16));
+			index = icons->Add(icon);
 			this->AppendItem(categoryItemId, element->GetUserDefinedName(), index, index, new ItemsTree(element));
 
 			iteratorList++;

@@ -16,6 +16,7 @@ public:
 
 	static wxIcon GetIcon(wxString resourceIcoName);
 	static wxBitmap GetBitmapFromIcon(wxString resourceIcoName);
+	static wxBitmap GetBitmapFromIcon(wxIcon icon);
 	static wxBitmap GetBitmap(wxString resourceBitmapName);
 
 	virtual ~UtilResource();

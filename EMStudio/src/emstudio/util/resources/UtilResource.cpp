@@ -9,6 +9,7 @@
 
 UtilResource::UtilResource() {
 
+
 }
 
 UtilResource::~UtilResource() {
@@ -18,8 +19,11 @@ wxIcon UtilResource::GetIcon(wxString resourceIcoName) {
 	return wxIcon(resourceIcoName, wxBITMAP_TYPE_ICO_RESOURCE);
 }
 wxBitmap UtilResource::GetBitmapFromIcon(wxString resourceIcoName) {
+	return UtilResource::GetBitmapFromIcon(UtilResource::GetIcon(resourceIcoName));
+}
+wxBitmap UtilResource::GetBitmapFromIcon(wxIcon icon) {
 	wxBitmap r;
-	r.CopyFromIcon(wxIcon(resourceIcoName, wxBITMAP_TYPE_ICO_RESOURCE));
+	r.CopyFromIcon(icon);
 	return r;
 }
 wxBitmap UtilResource::GetBitmap(wxString resourceBitmapName) {
