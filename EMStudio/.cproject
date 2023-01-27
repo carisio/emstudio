@@ -1,488 +1,245 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
-    	
-    <storageModule moduleId="org.eclipse.cdt.core.settings">
-        		
-        <cconfiguration id="cdt.managedbuild.config.gnu.mingw.exe.debug.1424576708">
-            			
-            <storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.mingw.exe.debug.1424576708" moduleId="org.eclipse.cdt.core.settings" name="Debug">
-                				
-                <externalSettings/>
-                				
-                <extensions>
-                    					
-                    <extension id="org.eclipse.cdt.core.PE" point="org.eclipse.cdt.core.BinaryParser"/>
-                    					
-                    <extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
-                    					
-                    <extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
-                    					
-                    <extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
-                    				
-                </extensions>
-                			
-            </storageModule>
-            			
-            <storageModule moduleId="cdtBuildSystem" version="4.0.0">
-                				
-                <configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="rm -rf" description="" id="cdt.managedbuild.config.gnu.mingw.exe.debug.1424576708" name="Debug" optionalBuildProperties="org.eclipse.cdt.docker.launcher.containerbuild.property.selectedvolumes=,org.eclipse.cdt.docker.launcher.containerbuild.property.volumes=" parent="cdt.managedbuild.config.gnu.mingw.exe.debug">
-                    					
-                    <folderInfo id="cdt.managedbuild.config.gnu.mingw.exe.debug.1424576708." name="/" resourcePath="">
-                        						
-                        <toolChain id="cdt.managedbuild.toolchain.gnu.mingw.exe.debug.1671304867" name="MinGW GCC" superClass="cdt.managedbuild.toolchain.gnu.mingw.exe.debug">
-                            							
-                            <targetPlatform id="cdt.managedbuild.target.gnu.platform.mingw.exe.debug.1297018267" name="Debug Platform" superClass="cdt.managedbuild.target.gnu.platform.mingw.exe.debug"/>
-                            							
-                            <builder buildPath="${workspace_loc:/EM Studio}/Debug" id="cdt.managedbuild.tool.gnu.builder.mingw.base.1231055751" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="CDT Internal Builder" superClass="cdt.managedbuild.tool.gnu.builder.mingw.base"/>
-                            							
-                            <tool id="cdt.managedbuild.tool.gnu.assembler.mingw.exe.debug.784630234" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.mingw.exe.debug">
-                                								
-                                <inputType id="cdt.managedbuild.tool.gnu.assembler.input.1748031881" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
-                                							
-                            </tool>
-                            							
-                            <tool id="cdt.managedbuild.tool.gnu.archiver.mingw.base.169893474" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.mingw.base"/>
-                            							
-                            <tool command="g++  -std=gnu++11" id="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.exe.debug.1915953019" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.exe.debug">
-                                								
-                                <option id="gnu.cpp.compiler.mingw.exe.debug.option.optimization.level.886784949" name="Optimization Level" superClass="gnu.cpp.compiler.mingw.exe.debug.option.optimization.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
-                                								
-                                <option id="gnu.cpp.compiler.mingw.exe.debug.option.debugging.level.1900082293" name="Debug Level" superClass="gnu.cpp.compiler.mingw.exe.debug.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
-                                								
-                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.include.paths.632975344" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
-                                    									
-                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src}&quot;"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src/emstudio/util/file/msgpack}&quot;"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="&quot;${WX_PATH}\lib\gcc_lib\mswu&quot;"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="&quot;${WX_PATH}\lib\gcc_lib\&quot;"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="&quot;${WX_PATH}\include&quot;"/>
-                                    								
-                                </option>
-                                								
-                                <option id="gnu.cpp.compiler.option.dialect.std.459898213" name="Language standard" superClass="gnu.cpp.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.cpp.compiler.dialect.default" valueType="enumerated"/>
-                                								
-                                <option id="gnu.cpp.compiler.option.warnings.allwarn.208422328" name="All warnings (-Wall)" superClass="gnu.cpp.compiler.option.warnings.allwarn" useByScannerDiscovery="false" value="false" valueType="boolean"/>
-                                								
-                                <option id="gnu.cpp.compiler.option.warnings.nowarn.2044251110" name="Inhibit all warnings (-w)" superClass="gnu.cpp.compiler.option.warnings.nowarn" useByScannerDiscovery="false" value="true" valueType="boolean"/>
-                                								
-                                <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1235610144" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
-                                							
-                            </tool>
-                            							
-                            <tool id="cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.debug.1579538504" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.debug">
-                                								
-                                <option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.mingw.exe.debug.option.optimization.level.567153972" name="Optimization Level" superClass="gnu.c.compiler.mingw.exe.debug.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
-                                								
-                                <option id="gnu.c.compiler.mingw.exe.debug.option.debugging.level.1216392777" name="Debug Level" superClass="gnu.c.compiler.mingw.exe.debug.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.max" valueType="enumerated"/>
-                                								
-                                <option id="gnu.c.compiler.option.dialect.std.1829404659" name="Language standard" superClass="gnu.c.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.c.compiler.dialect.default" valueType="enumerated"/>
-                                								
-                                <inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.808799048" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
-                                							
-                            </tool>
-                            							
-                            <tool id="cdt.managedbuild.tool.gnu.c.linker.mingw.exe.debug.2067780926" name="MinGW C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.mingw.exe.debug"/>
-                            							
-                            <tool command="g++  -static -static-libgcc -Wl,--subsystem,windows -mwindows" id="cdt.managedbuild.tool.gnu.cpp.linker.mingw.exe.debug.990496983" name="MinGW C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.mingw.exe.debug">
-                                								
-                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.link.option.libs.209222240" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" useByScannerDiscovery="false" valueType="libs">
-                                    									
-                                    <listOptionValue builtIn="false" value="wxmsw31ud_xrc"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wxmsw31ud_gl"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="opengl32"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="glu32"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="freeglut"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wxmsw31ud_richtext"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wxbase31ud_net"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wxmsw31ud_propgrid"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wxmsw31ud_media"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wxmsw31ud_aui"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wxmsw31ud_html"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wxmsw31ud_adv"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wxbase31ud_xml"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wxmsw31ud_core"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wxbase31ud"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wxtiff"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wxjpeg"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wxpng"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wxzlib"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wxregexu"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wxexpat"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wxscintilla"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="kernel32"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="user32"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="gdi32"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="comdlg32"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="winspool"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="winmm"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="shell32"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="comctl32"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="ole32"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="oleaut32"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="oleacc"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="uuid"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="rpcrt4"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="advapi32"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wsock32"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="odbc32"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="uxtheme"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="shlwapi"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="version"/>
-                                    								
-                                </option>
-                                								
-                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.link.option.paths.1641765308" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
-                                    									
-                                    <listOptionValue builtIn="false" value="&quot;${WX_PATH}\lib\gcc_lib\mswu&quot;"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="&quot;${WX_PATH}\lib\gcc_lib&quot;"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="&quot;${WX_PATH}\lib&quot;"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src/emstudio/resource}&quot;"/>
-                                    								
-                                </option>
-                                								
-                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.link.option.userobjs.921143122" name="Other objects" superClass="gnu.cpp.link.option.userobjs" valueType="userObjs">
-                                    									
-                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src/emstudio/util/resources/resource.o}&quot;"/>
-                                    								
-                                </option>
-                                								
-                                <inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1541933575" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
-                                    									
-                                    <additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
-                                    									
-                                    <additionalInput kind="additionalinput" paths="$(LIBS)"/>
-                                    								
-                                </inputType>
-                                							
-                            </tool>
-                            						
-                        </toolChain>
-                        					
-                    </folderInfo>
-                    				
-                </configuration>
-                			
-            </storageModule>
-            			
-            <storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
-            		
-        </cconfiguration>
-        		
-        <cconfiguration id="cdt.managedbuild.config.gnu.mingw.exe.debug.1424576708.16886201">
-            			
-            <storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.mingw.exe.debug.1424576708.16886201" moduleId="org.eclipse.cdt.core.settings" name="Release">
-                				
-                <externalSettings/>
-                				
-                <extensions>
-                    					
-                    <extension id="org.eclipse.cdt.core.PE" point="org.eclipse.cdt.core.BinaryParser"/>
-                    					
-                    <extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
-                    					
-                    <extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
-                    					
-                    <extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
-                    				
-                </extensions>
-                			
-            </storageModule>
-            			
-            <storageModule moduleId="cdtBuildSystem" version="4.0.0">
-                				
-                <configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="rm -rf" description="" id="cdt.managedbuild.config.gnu.mingw.exe.debug.1424576708.16886201" name="Release" optionalBuildProperties="org.eclipse.cdt.docker.launcher.containerbuild.property.volumes=,org.eclipse.cdt.docker.launcher.containerbuild.property.selectedvolumes=" parent="cdt.managedbuild.config.gnu.mingw.exe.debug">
-                    					
-                    <folderInfo id="cdt.managedbuild.config.gnu.mingw.exe.debug.1424576708.16886201." name="/" resourcePath="">
-                        						
-                        <toolChain id="cdt.managedbuild.toolchain.gnu.mingw.exe.debug.1126317372" name="MinGW GCC" superClass="cdt.managedbuild.toolchain.gnu.mingw.exe.debug">
-                            							
-                            <targetPlatform id="cdt.managedbuild.target.gnu.platform.mingw.exe.debug.1316916805" name="Debug Platform" superClass="cdt.managedbuild.target.gnu.platform.mingw.exe.debug"/>
-                            							
-                            <builder buildPath="${workspace_loc:/EM Studio}/Debug" id="cdt.managedbuild.tool.gnu.builder.mingw.base.799254485" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="CDT Internal Builder" superClass="cdt.managedbuild.tool.gnu.builder.mingw.base"/>
-                            							
-                            <tool id="cdt.managedbuild.tool.gnu.assembler.mingw.exe.debug.1708795457" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.mingw.exe.debug">
-                                								
-                                <inputType id="cdt.managedbuild.tool.gnu.assembler.input.1125236442" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
-                                							
-                            </tool>
-                            							
-                            <tool id="cdt.managedbuild.tool.gnu.archiver.mingw.base.878544376" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.mingw.base"/>
-                            							
-                            <tool command="g++  -std=gnu++11 -static-libstdc++" id="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.exe.debug.1217031990" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.exe.debug">
-                                								
-                                <option id="gnu.cpp.compiler.mingw.exe.debug.option.optimization.level.272591091" name="Optimization Level" superClass="gnu.cpp.compiler.mingw.exe.debug.option.optimization.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
-                                								
-                                <option id="gnu.cpp.compiler.mingw.exe.debug.option.debugging.level.1347209996" name="Debug Level" superClass="gnu.cpp.compiler.mingw.exe.debug.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
-                                								
-                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.include.paths.2084523245" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
-                                    									
-                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src}&quot;"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src/emstudio/util/file/msgpack}&quot;"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="&quot;${WX_PATH}\lib\gcc_lib\mswu&quot;"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="&quot;${WX_PATH}\lib\gcc_lib\&quot;"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="&quot;${WX_PATH}\include&quot;"/>
-                                    								
-                                </option>
-                                								
-                                <option id="gnu.cpp.compiler.option.dialect.std.1988192866" name="Language standard" superClass="gnu.cpp.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.cpp.compiler.dialect.default" valueType="enumerated"/>
-                                								
-                                <option id="gnu.cpp.compiler.option.warnings.allwarn.1010115252" name="All warnings (-Wall)" superClass="gnu.cpp.compiler.option.warnings.allwarn" useByScannerDiscovery="false" value="false" valueType="boolean"/>
-                                								
-                                <option id="gnu.cpp.compiler.option.warnings.nowarn.108936082" name="Inhibit all warnings (-w)" superClass="gnu.cpp.compiler.option.warnings.nowarn" useByScannerDiscovery="false" value="true" valueType="boolean"/>
-                                								
-                                <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1806415809" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
-                                							
-                            </tool>
-                            							
-                            <tool id="cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.debug.365112855" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.debug">
-                                								
-                                <option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.mingw.exe.debug.option.optimization.level.1228695650" name="Optimization Level" superClass="gnu.c.compiler.mingw.exe.debug.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
-                                								
-                                <option id="gnu.c.compiler.mingw.exe.debug.option.debugging.level.1236533666" name="Debug Level" superClass="gnu.c.compiler.mingw.exe.debug.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.max" valueType="enumerated"/>
-                                								
-                                <option id="gnu.c.compiler.option.dialect.std.1175982834" name="Language standard" superClass="gnu.c.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.c.compiler.dialect.default" valueType="enumerated"/>
-                                								
-                                <inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.993603134" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
-                                							
-                            </tool>
-                            							
-                            <tool id="cdt.managedbuild.tool.gnu.c.linker.mingw.exe.debug.1483650381" name="MinGW C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.mingw.exe.debug"/>
-                            							
-                            <tool command="g++  -static -static-libgcc -Wl,--subsystem,windows -mwindows" id="cdt.managedbuild.tool.gnu.cpp.linker.mingw.exe.debug.1714993555" name="MinGW C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.mingw.exe.debug">
-                                								
-                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.link.option.libs.1235965011" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" useByScannerDiscovery="false" valueType="libs">
-                                    									
-                                    <listOptionValue builtIn="false" value="wxmsw31u_xrc"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wxmsw31u_gl"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="opengl32"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="glu32"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="freeglut"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wxmsw31u_richtext"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wxbase31u_net"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wxmsw31u_propgrid"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wxmsw31u_media"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wxmsw31u_aui"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wxmsw31u_html"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wxmsw31u_adv"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wxbase31u_xml"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wxmsw31u_core"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wxbase31u"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wxtiff"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wxjpeg"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wxpng"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wxzlib"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wxregexu"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wxexpat"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wxscintilla"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="kernel32"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="user32"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="gdi32"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="comdlg32"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="winspool"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="winmm"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="shell32"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="comctl32"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="ole32"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="oleaut32"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="oleacc"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="uuid"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="rpcrt4"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="advapi32"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="wsock32"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="odbc32"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="uxtheme"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="shlwapi"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="version"/>
-                                    								
-                                </option>
-                                								
-                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.link.option.paths.1938765436" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
-                                    									
-                                    <listOptionValue builtIn="false" value="&quot;${WX_PATH}\lib\gcc_lib\mswu&quot;"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="&quot;${WX_PATH}\lib\gcc_lib&quot;"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="&quot;${WX_PATH}\lib&quot;"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src/emstudio/resource}&quot;"/>
-                                    								
-                                </option>
-                                								
-                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.link.option.userobjs.1984889343" name="Other objects" superClass="gnu.cpp.link.option.userobjs" valueType="userObjs">
-                                    									
-                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src/emstudio/util/resources/resource.o}&quot;"/>
-                                    								
-                                </option>
-                                								
-                                <inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.2036467789" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
-                                    									
-                                    <additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
-                                    									
-                                    <additionalInput kind="additionalinput" paths="$(LIBS)"/>
-                                    								
-                                </inputType>
-                                							
-                            </tool>
-                            						
-                        </toolChain>
-                        					
-                    </folderInfo>
-                    				
-                </configuration>
-                			
-            </storageModule>
-            			
-            <storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
-            		
-        </cconfiguration>
-        	
-    </storageModule>
-    	
-    <storageModule moduleId="cdtBuildSystem" version="4.0.0">
-        		
-        <project id="EM Studio.cdt.managedbuild.target.gnu.mingw.exe.824211797" name="Executable" projectType="cdt.managedbuild.target.gnu.mingw.exe"/>
-        	
-    </storageModule>
-    	
-    <storageModule moduleId="scannerConfiguration">
-        		
-        <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-        		
-        <scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.release.3634629;cdt.managedbuild.config.gnu.mingw.exe.release.3634629.;cdt.managedbuild.tool.gnu.cpp.compiler.mingw.exe.release.1598777588;cdt.managedbuild.tool.gnu.cpp.compiler.input.631698574">
-            			
-            <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-            		
-        </scannerConfigBuildInfo>
-        		
-        <scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.debug.1424576708;cdt.managedbuild.config.gnu.mingw.exe.debug.1424576708.;cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.debug.1579538504;cdt.managedbuild.tool.gnu.c.compiler.input.808799048">
-            			
-            <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-            		
-        </scannerConfigBuildInfo>
-        		
-        <scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.debug.1424576708;cdt.managedbuild.config.gnu.mingw.exe.debug.1424576708.;cdt.managedbuild.tool.gnu.cpp.compiler.mingw.exe.debug.1915953019;cdt.managedbuild.tool.gnu.cpp.compiler.input.1235610144">
-            			
-            <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-            		
-        </scannerConfigBuildInfo>
-        		
-        <scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.release.3634629;cdt.managedbuild.config.gnu.mingw.exe.release.3634629.;cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.release.1719808307;cdt.managedbuild.tool.gnu.c.compiler.input.556254087">
-            			
-            <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-            		
-        </scannerConfigBuildInfo>
-        	
-    </storageModule>
-    	
-    <storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
-    	
-    <storageModule moduleId="refreshScope" versionNumber="2">
-        		
-        <configuration configurationName="Debug">
-            			
-            <resource resourceType="PROJECT" workspacePath="/EMStudio"/>
-            		
-        </configuration>
-        		
-        <configuration configurationName="Release">
-            			
-            <resource resourceType="PROJECT" workspacePath="/EMStudio"/>
-            		
-        </configuration>
-        	
-    </storageModule>
-    	
-    <storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
-    
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="cdt.managedbuild.config.gnu.mingw.exe.debug.1424576708">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.mingw.exe.debug.1424576708" moduleId="org.eclipse.cdt.core.settings" name="Debug">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.PE64" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="rm -rf" description="" id="cdt.managedbuild.config.gnu.mingw.exe.debug.1424576708" name="Debug" optionalBuildProperties="org.eclipse.cdt.docker.launcher.containerbuild.property.selectedvolumes=,org.eclipse.cdt.docker.launcher.containerbuild.property.volumes=" parent="cdt.managedbuild.config.gnu.mingw.exe.debug">
+					<folderInfo id="cdt.managedbuild.config.gnu.mingw.exe.debug.1424576708." name="/" resourcePath="">
+						<toolChain id="cdt.managedbuild.toolchain.gnu.mingw.exe.debug.1671304867" name="MinGW GCC" superClass="cdt.managedbuild.toolchain.gnu.mingw.exe.debug">
+							<targetPlatform id="cdt.managedbuild.target.gnu.platform.mingw.exe.debug.1297018267" name="Debug Platform" superClass="cdt.managedbuild.target.gnu.platform.mingw.exe.debug"/>
+							<builder buildPath="${workspace_loc:/EM Studio}/Debug" id="cdt.managedbuild.tool.gnu.builder.mingw.base.1231055751" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="CDT Internal Builder" superClass="cdt.managedbuild.tool.gnu.builder.mingw.base"/>
+							<tool id="cdt.managedbuild.tool.gnu.assembler.mingw.exe.debug.784630234" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.mingw.exe.debug">
+								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1748031881" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.archiver.mingw.base.169893474" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.mingw.base"/>
+							<tool command="g++  -std=gnu++11" id="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.exe.debug.1915953019" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.exe.debug">
+								<option id="gnu.cpp.compiler.mingw.exe.debug.option.optimization.level.886784949" name="Optimization Level" superClass="gnu.cpp.compiler.mingw.exe.debug.option.optimization.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.mingw.exe.debug.option.debugging.level.1900082293" name="Debug Level" superClass="gnu.cpp.compiler.mingw.exe.debug.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.include.paths.632975344" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src/emstudio/util/file/msgpack}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${WX_PATH}\lib\gcc_lib\mswu&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${WX_PATH}\lib\gcc_lib\&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${WX_PATH}\include&quot;"/>
+								</option>
+								<option id="gnu.cpp.compiler.option.dialect.std.459898213" name="Language standard" superClass="gnu.cpp.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.cpp.compiler.dialect.default" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.warnings.allwarn.208422328" name="All warnings (-Wall)" superClass="gnu.cpp.compiler.option.warnings.allwarn" useByScannerDiscovery="false" value="false" valueType="boolean"/>
+								<option id="gnu.cpp.compiler.option.warnings.nowarn.2044251110" name="Inhibit all warnings (-w)" superClass="gnu.cpp.compiler.option.warnings.nowarn" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1235610144" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.debug.1579538504" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.debug">
+								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.mingw.exe.debug.option.optimization.level.567153972" name="Optimization Level" superClass="gnu.c.compiler.mingw.exe.debug.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
+								<option id="gnu.c.compiler.mingw.exe.debug.option.debugging.level.1216392777" name="Debug Level" superClass="gnu.c.compiler.mingw.exe.debug.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.max" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.dialect.std.1829404659" name="Language standard" superClass="gnu.c.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.c.compiler.dialect.default" valueType="enumerated"/>
+								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.808799048" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.c.linker.mingw.exe.debug.2067780926" name="MinGW C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.mingw.exe.debug"/>
+							<tool command="g++  -static -static-libgcc -Wl,--subsystem,windows -mwindows" id="cdt.managedbuild.tool.gnu.cpp.linker.mingw.exe.debug.990496983" name="MinGW C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.mingw.exe.debug">
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.link.option.libs.209222240" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" useByScannerDiscovery="false" valueType="libs">
+									<listOptionValue builtIn="false" value="wxmsw32ud_xrc"/>
+									<listOptionValue builtIn="false" value="wxmsw32ud_gl"/>
+									<listOptionValue builtIn="false" value="opengl32"/>
+									<listOptionValue builtIn="false" value="glu32"/>
+									<listOptionValue builtIn="false" value="freeglut"/>
+									<listOptionValue builtIn="false" value="wxmsw32ud_richtext"/>
+									<listOptionValue builtIn="false" value="wxbase32ud_net"/>
+									<listOptionValue builtIn="false" value="wxmsw32ud_propgrid"/>
+									<listOptionValue builtIn="false" value="wxmsw32ud_media"/>
+									<listOptionValue builtIn="false" value="wxmsw32ud_aui"/>
+									<listOptionValue builtIn="false" value="wxmsw32ud_html"/>
+									<listOptionValue builtIn="false" value="wxmsw32ud_adv"/>
+									<listOptionValue builtIn="false" value="wxbase32ud_xml"/>
+									<listOptionValue builtIn="false" value="wxmsw32ud_core"/>
+									<listOptionValue builtIn="false" value="wxbase32ud"/>
+									<listOptionValue builtIn="false" value="wxtiff"/>
+									<listOptionValue builtIn="false" value="wxjpeg"/>
+									<listOptionValue builtIn="false" value="wxpng"/>
+									<listOptionValue builtIn="false" value="wxzlib"/>
+									<listOptionValue builtIn="false" value="wxregexu"/>
+									<listOptionValue builtIn="false" value="wxexpat"/>
+									<listOptionValue builtIn="false" value="wxscintilla"/>
+									<listOptionValue builtIn="false" value="kernel32"/>
+									<listOptionValue builtIn="false" value="user32"/>
+									<listOptionValue builtIn="false" value="gdi32"/>
+									<listOptionValue builtIn="false" value="comdlg32"/>
+									<listOptionValue builtIn="false" value="winspool"/>
+									<listOptionValue builtIn="false" value="winmm"/>
+									<listOptionValue builtIn="false" value="shell32"/>
+									<listOptionValue builtIn="false" value="comctl32"/>
+									<listOptionValue builtIn="false" value="ole32"/>
+									<listOptionValue builtIn="false" value="oleaut32"/>
+									<listOptionValue builtIn="false" value="uuid"/>
+									<listOptionValue builtIn="false" value="oleacc"/>
+									<listOptionValue builtIn="false" value="rpcrt4"/>
+									<listOptionValue builtIn="false" value="advapi32"/>
+									<listOptionValue builtIn="false" value="wsock32"/>
+									<listOptionValue builtIn="false" value="odbc32"/>
+									<listOptionValue builtIn="false" value="uxtheme"/>
+									<listOptionValue builtIn="false" value="shlwapi"/>
+									<listOptionValue builtIn="false" value="version"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.link.option.paths.1641765308" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
+									<listOptionValue builtIn="false" value="&quot;${WX_PATH}\lib\gcc_lib\mswu&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${WX_PATH}\lib\gcc_lib&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${WX_PATH}\lib&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src/emstudio/resource}&quot;"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.link.option.userobjs.921143122" name="Other objects" superClass="gnu.cpp.link.option.userobjs" valueType="userObjs">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src/emstudio/util/resources/resource.o}&quot;"/>
+								</option>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1541933575" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+		<cconfiguration id="cdt.managedbuild.config.gnu.mingw.exe.debug.1424576708.16886201">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.mingw.exe.debug.1424576708.16886201" moduleId="org.eclipse.cdt.core.settings" name="Release">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.PE64" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="rm -rf" description="" id="cdt.managedbuild.config.gnu.mingw.exe.debug.1424576708.16886201" name="Release" optionalBuildProperties="org.eclipse.cdt.docker.launcher.containerbuild.property.selectedvolumes=,org.eclipse.cdt.docker.launcher.containerbuild.property.volumes=" parent="cdt.managedbuild.config.gnu.mingw.exe.debug">
+					<folderInfo id="cdt.managedbuild.config.gnu.mingw.exe.debug.1424576708.16886201." name="/" resourcePath="">
+						<toolChain id="cdt.managedbuild.toolchain.gnu.mingw.exe.debug.1126317372" name="MinGW GCC" superClass="cdt.managedbuild.toolchain.gnu.mingw.exe.debug">
+							<targetPlatform id="cdt.managedbuild.target.gnu.platform.mingw.exe.debug.1316916805" name="Debug Platform" superClass="cdt.managedbuild.target.gnu.platform.mingw.exe.debug"/>
+							<builder buildPath="${workspace_loc:/EM Studio}/Debug" id="cdt.managedbuild.tool.gnu.builder.mingw.base.799254485" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="CDT Internal Builder" superClass="cdt.managedbuild.tool.gnu.builder.mingw.base"/>
+							<tool id="cdt.managedbuild.tool.gnu.assembler.mingw.exe.debug.1708795457" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.mingw.exe.debug">
+								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1125236442" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.archiver.mingw.base.878544376" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.mingw.base"/>
+							<tool command="g++  -std=gnu++11 -static-libstdc++" id="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.exe.debug.1217031990" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.exe.debug">
+								<option id="gnu.cpp.compiler.mingw.exe.debug.option.optimization.level.272591091" name="Optimization Level" superClass="gnu.cpp.compiler.mingw.exe.debug.option.optimization.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.mingw.exe.debug.option.debugging.level.1347209996" name="Debug Level" superClass="gnu.cpp.compiler.mingw.exe.debug.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.include.paths.2084523245" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src/emstudio/util/file/msgpack}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${WX_PATH}\lib\gcc_lib\mswu&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${WX_PATH}\lib\gcc_lib\&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${WX_PATH}\include&quot;"/>
+								</option>
+								<option id="gnu.cpp.compiler.option.dialect.std.1988192866" name="Language standard" superClass="gnu.cpp.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.cpp.compiler.dialect.default" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.warnings.allwarn.1010115252" name="All warnings (-Wall)" superClass="gnu.cpp.compiler.option.warnings.allwarn" useByScannerDiscovery="false" value="false" valueType="boolean"/>
+								<option id="gnu.cpp.compiler.option.warnings.nowarn.108936082" name="Inhibit all warnings (-w)" superClass="gnu.cpp.compiler.option.warnings.nowarn" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1806415809" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.debug.365112855" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.debug">
+								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.mingw.exe.debug.option.optimization.level.1228695650" name="Optimization Level" superClass="gnu.c.compiler.mingw.exe.debug.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
+								<option id="gnu.c.compiler.mingw.exe.debug.option.debugging.level.1236533666" name="Debug Level" superClass="gnu.c.compiler.mingw.exe.debug.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.max" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.dialect.std.1175982834" name="Language standard" superClass="gnu.c.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.c.compiler.dialect.default" valueType="enumerated"/>
+								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.993603134" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.c.linker.mingw.exe.debug.1483650381" name="MinGW C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.mingw.exe.debug"/>
+							<tool command="g++  -static -static-libgcc -Wl,--subsystem,windows -mwindows" id="cdt.managedbuild.tool.gnu.cpp.linker.mingw.exe.debug.1714993555" name="MinGW C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.mingw.exe.debug">
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.link.option.libs.1235965011" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" useByScannerDiscovery="false" valueType="libs">
+									<listOptionValue builtIn="false" value="wxmsw32u_xrc"/>
+									<listOptionValue builtIn="false" value="wxmsw32u_gl"/>
+									<listOptionValue builtIn="false" value="opengl32"/>
+									<listOptionValue builtIn="false" value="glu32"/>
+									<listOptionValue builtIn="false" value="freeglut"/>
+									<listOptionValue builtIn="false" value="wxmsw32u_richtext"/>
+									<listOptionValue builtIn="false" value="wxbase31u_net"/>
+									<listOptionValue builtIn="false" value="wxmsw32u_propgrid"/>
+									<listOptionValue builtIn="false" value="wxmsw32u_media"/>
+									<listOptionValue builtIn="false" value="wxmsw32u_aui"/>
+									<listOptionValue builtIn="false" value="wxmsw32u_html"/>
+									<listOptionValue builtIn="false" value="wxmsw32u_adv"/>
+									<listOptionValue builtIn="false" value="wxbase31u_xml"/>
+									<listOptionValue builtIn="false" value="wxmsw32u_core"/>
+									<listOptionValue builtIn="false" value="wxbase31u"/>
+									<listOptionValue builtIn="false" value="wxtiff"/>
+									<listOptionValue builtIn="false" value="wxjpeg"/>
+									<listOptionValue builtIn="false" value="wxpng"/>
+									<listOptionValue builtIn="false" value="wxzlib"/>
+									<listOptionValue builtIn="false" value="wxregexu"/>
+									<listOptionValue builtIn="false" value="wxexpat"/>
+									<listOptionValue builtIn="false" value="wxscintilla"/>
+									<listOptionValue builtIn="false" value="kernel32"/>
+									<listOptionValue builtIn="false" value="user32"/>
+									<listOptionValue builtIn="false" value="gdi32"/>
+									<listOptionValue builtIn="false" value="comdlg32"/>
+									<listOptionValue builtIn="false" value="winspool"/>
+									<listOptionValue builtIn="false" value="winmm"/>
+									<listOptionValue builtIn="false" value="shell32"/>
+									<listOptionValue builtIn="false" value="comctl32"/>
+									<listOptionValue builtIn="false" value="ole32"/>
+									<listOptionValue builtIn="false" value="oleaut32"/>
+									<listOptionValue builtIn="false" value="oleacc"/>
+									<listOptionValue builtIn="false" value="uuid"/>
+									<listOptionValue builtIn="false" value="rpcrt4"/>
+									<listOptionValue builtIn="false" value="advapi32"/>
+									<listOptionValue builtIn="false" value="wsock32"/>
+									<listOptionValue builtIn="false" value="odbc32"/>
+									<listOptionValue builtIn="false" value="uxtheme"/>
+									<listOptionValue builtIn="false" value="shlwapi"/>
+									<listOptionValue builtIn="false" value="version"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.link.option.paths.1938765436" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
+									<listOptionValue builtIn="false" value="&quot;${WX_PATH}\lib\gcc_lib\mswu&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${WX_PATH}\lib\gcc_lib&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${WX_PATH}\lib&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src/emstudio/resource}&quot;"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.link.option.userobjs.1984889343" name="Other objects" superClass="gnu.cpp.link.option.userobjs" valueType="userObjs">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src/emstudio/util/resources/resource.o}&quot;"/>
+								</option>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.2036467789" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="EM Studio.cdt.managedbuild.target.gnu.mingw.exe.824211797" name="Executable" projectType="cdt.managedbuild.target.gnu.mingw.exe"/>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.release.3634629;cdt.managedbuild.config.gnu.mingw.exe.release.3634629.;cdt.managedbuild.tool.gnu.cpp.compiler.mingw.exe.release.1598777588;cdt.managedbuild.tool.gnu.cpp.compiler.input.631698574">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.debug.1424576708;cdt.managedbuild.config.gnu.mingw.exe.debug.1424576708.;cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.debug.1579538504;cdt.managedbuild.tool.gnu.c.compiler.input.808799048">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.debug.1424576708;cdt.managedbuild.config.gnu.mingw.exe.debug.1424576708.;cdt.managedbuild.tool.gnu.cpp.compiler.mingw.exe.debug.1915953019;cdt.managedbuild.tool.gnu.cpp.compiler.input.1235610144">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.release.3634629;cdt.managedbuild.config.gnu.mingw.exe.release.3634629.;cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.release.1719808307;cdt.managedbuild.tool.gnu.c.compiler.input.556254087">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Debug">
+			<resource resourceType="PROJECT" workspacePath="/EMStudio"/>
+		</configuration>
+		<configuration configurationName="Release">
+			<resource resourceType="PROJECT" workspacePath="/EMStudio"/>
+		</configuration>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
 </cproject>

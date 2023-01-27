@@ -19,7 +19,7 @@ PortableBinaryInputBuffer::~PortableBinaryInputBuffer() {
 bool PortableBinaryInputBuffer::LoadFile(wxString fileName) {
 	TicTac t;
 	t.Tic("LoadFile - Carregando arquivo para o buffer");
-	// TODO: Verificar se tem que apagar dataFile ou não
+	// TODO: Verificar se tem que apagar dataFile ou nï¿½o
 	struct stat fileInfo;
 	stat(fileName, &fileInfo);
 	char* dataFile = new char[fileInfo.st_size];
@@ -27,7 +27,7 @@ bool PortableBinaryInputBuffer::LoadFile(wxString fileName) {
 	cout << "Arquivo: " << fileName << endl;
 	cout << "Tamanho: " << fileInfo.st_size << endl;
 
-	ifstream file(fileName, ios::binary);
+	ifstream file(fileName.ToStdString(), ios::binary);
 	if (file.is_open()) {
 		file.read(dataFile, fileInfo.st_size);
 		file.close();
@@ -45,7 +45,7 @@ bool PortableBinaryInputBuffer::LoadFile(wxString fileName) {
 }
 char PortableBinaryInputBuffer::ReadChar() {
 //	cout << "ReadChar() = ";
-	// Char é gravado como um int
+	// Char ï¿½ gravado como um int
 	pac.next(&result);
 	msgpack::object obj = result.get();
 	obj.convert(&i);

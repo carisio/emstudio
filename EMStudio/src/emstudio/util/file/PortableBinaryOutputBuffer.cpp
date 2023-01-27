@@ -110,7 +110,7 @@ string PortableBinaryOutputBuffer::GetStringRepresentation() {
 
 bool PortableBinaryOutputBuffer::SaveToFile(wxString fileName) {
 	try{
-		ofstream outFile(fileName, ios::binary);
+		ofstream outFile(fileName.ToStdString(), ios::binary);
 
 		if (outFile.is_open()) {
 			char* dados = buffer.data();

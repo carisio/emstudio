@@ -50,13 +50,13 @@ wxString FileManager::GetProjectCode(UnitsSmartPointer units, SymbolsMapSmartPoi
 	wxString code = md5(str);
 	cout << "md5 ok" << endl;
 	cout << str << endl;
-	cout << "Código do projeto = " << code << endl;
+	cout << "Cï¿½digo do projeto = " << code << endl;
 	return code;
 
 }
 bool FileManager::SaveProject(wxString fileName, UnitsSmartPointer units, SymbolsMapSmartPointer symbolsMap, ElementManagerSmartPointer em, ResultTree& resultTree) {
 	TicTac t;
-	t.Tic("Método SaveProject" );
+	t.Tic("Mï¿½todo SaveProject" );
 	StatusDialog status("Saving project...");
 
 	PortableBinaryOutputBuffer output;
@@ -82,7 +82,7 @@ bool FileManager::SaveProject(wxString fileName, UnitsSmartPointer units, Symbol
 }
 
 void FileManager::AppendVersionToBuffer(OutputBuffer& buff) {
-	// Versão atual: EM Studio [FDTD] v. 0.0.1
+	// Versï¿½o atual: EM Studio [FDTD] v. 0.0.1
 	wxString description = "EM Studio [" + AppType + "]";
 	int v1 = AppV1;
 	int v2 = AppV2;
@@ -93,7 +93,7 @@ void FileManager::AppendVersionToBuffer(OutputBuffer& buff) {
 	buff.WriteInt(v3);
 }
 /**
- * Apenas concatena 3 strings representando as unidades escolhidas pelo usuário
+ * Apenas concatena 3 strings representando as unidades escolhidas pelo usuï¿½rio
  */
 void FileManager::AppendUnitsToBuffer(OutputBuffer& buff, UnitsSmartPointer units) {
 	wxString s = units->GetUserDefinedSpaceUnit().first;
@@ -124,7 +124,7 @@ void FileManager::AppendSymbolsToBuffer(OutputBuffer& buff, SymbolsMapSmartPoint
  * Concatena todos os elementos ao buffer
  */
 void FileManager::AppendElementManagerToBuffer(OutputBuffer& buff, ElementManagerSmartPointer em) {
-	// Guarda inicialmente o número de elementos
+	// Guarda inicialmente o nï¿½mero de elementos
 	int size = em->GetNumberOfElements();
 	buff.WriteInt(size);
 
@@ -152,11 +152,11 @@ void FileManager::AppendProjectResults(OutputBuffer& buff, ResultTree& resultTre
 	TicTac t;
 	t.Tic("Adicionando resultados ao buffer");
 
-	// Salva o código do projeto
+	// Salva o cï¿½digo do projeto
 	wxString projectCode = resultTree.GetProjectCode();
 	buff.WriteString(projectCode);
 
-	// Salva o número de engines
+	// Salva o nï¿½mero de engines
 	list<EngineResults> listOfEngineResults = resultTree.GetEngineResults();
 	list<EngineResults>::iterator engineResultsIt = listOfEngineResults.begin();
 	list<EngineResults>::iterator engineResultsEnd = listOfEngineResults.end();
@@ -170,18 +170,18 @@ void FileManager::AppendProjectResults(OutputBuffer& buff, ResultTree& resultTre
 		// Para cada engine, salva o nome da classe do DTO ...
 		wxString dtoClassName = engineResults.GetDTOClassName();
 		buff.WriteString(dtoClassName);
-		// ... e salva também o nome do método, conforme definido pelo usuário
+		// ... e salva tambï¿½m o nome do mï¿½todo, conforme definido pelo usuï¿½rio
 		wxString engineName = engineResults.GetName();
 		buff.WriteString(engineName);
 
-		// Salva os resultados da própria engine
+		// Salva os resultados da prï¿½pria engine
 		list<ResultSmartPointer> myOwnResults = engineResults.GetMyResults();
 		list<ResultSmartPointer>::iterator myOwnResultsBegin = myOwnResults.begin();
 		list<ResultSmartPointer>::iterator myOwnResultsEnd = myOwnResults.end();
 		int nElements = myOwnResults.size();
 		buff.WriteInt(nElements);
 		while (myOwnResultsBegin!=myOwnResultsEnd) {
-			// Cada resultado é salvo com o nome, o nome de sua classe e, em seguida, suas propriedades
+			// Cada resultado ï¿½ salvo com o nome, o nome de sua classe e, em seguida, suas propriedades
 			ResultSmartPointer result = (*myOwnResultsBegin);
 			wxString resultName = result->GetName();
 			wxString resultClassName = result->GetResultClassName();
@@ -198,7 +198,7 @@ void FileManager::AppendProjectResults(OutputBuffer& buff, ResultTree& resultTre
 			myOwnResultsBegin++;
 		}
 
-		// Agora começa a iterar os resultados dos elementos da engine em si.
+		// Agora comeï¿½a a iterar os resultados dos elementos da engine em si.
 		list<ElementResults> listaDeElementosDaEngine = engineResults.GetElementsResults();
 		list<ElementResults>::iterator listaDeElementosDaEngineIt = listaDeElementosDaEngine.begin();
 		list<ElementResults>::iterator listaDeElementosDaEngineEnd = listaDeElementosDaEngine.end();
@@ -208,13 +208,13 @@ void FileManager::AppendProjectResults(OutputBuffer& buff, ResultTree& resultTre
 
 		while (listaDeElementosDaEngineIt != listaDeElementosDaEngineEnd) {
 			ElementResults elementResults = *listaDeElementosDaEngineIt;
-			// Para cada resultado, grava também o nome do DTO correspondente à classe que chamou e o nome conforme definido pelo usuário
+			// Para cada resultado, grava tambï¿½m o nome do DTO correspondente ï¿½ classe que chamou e o nome conforme definido pelo usuï¿½rio
 			dtoClassName = elementResults.GetDTOClassName();
 			wxString elementName = elementResults.GetName();
 			buff.WriteString(dtoClassName);
 			buff.WriteString(elementName);
 
-			// Cada elemento pode ter vários resultados
+			// Cada elemento pode ter vï¿½rios resultados
 			list<ResultSmartPointer> listaDeResultados = elementResults.GetResults();
 			list<ResultSmartPointer>::iterator listaDeResultadosIt = listaDeResultados.begin();
 			list<ResultSmartPointer>::iterator listaDeResultadosEnd = listaDeResultados.end();
@@ -223,7 +223,7 @@ void FileManager::AppendProjectResults(OutputBuffer& buff, ResultTree& resultTre
 			buff.WriteInt(nResults);
 
 			while (listaDeResultadosIt != listaDeResultadosEnd) {
-				// Cada resultado é salvo com o nome, o nome de sua classe e, em seguida, suas propriedades
+				// Cada resultado ï¿½ salvo com o nome, o nome de sua classe e, em seguida, suas propriedades
 				ResultSmartPointer result = (*listaDeResultadosIt);
 				wxString resultName = result->GetName();
 				wxString resultClassName = result->GetResultClassName();
@@ -300,7 +300,7 @@ bool FileManager::LoadProject(wxString fileName, UnitsSmartPointer units, Symbol
 		return false;
 	} catch (exception& e) {
 		errorMessage = "File format unknown";
-		cout << "Ocorreu uma exceção: " << e.what() << endl;
+		cout << "Ocorreu uma exceï¿½ï¿½o: " << e.what() << endl;
 		return false;
 	}
 
@@ -313,10 +313,10 @@ bool FileManager::RetrieveVersionFromBuffer(InputBuffer& buff) {
 	currentFileV2 = buff.ReadInt();
 	currentFileV3 = buff.ReadInt();
 
-	/* Essa versão permite apenas a leitura de "EM Studio [APPTYPE] v. 0.0.X ou v. 0.1.X
+	/* Essa versï¿½o permite apenas a leitura de "EM Studio [APPTYPE] v. 0.0.X ou v. 0.1.X
 	 * v3 pode ser maior do que 1, pois ele apenas representa melhorias de tela,
-	 * e não alterações nos formatos dos arquivos */
-	cout << "Abrindo. VERSÃO: " << currentFileDescription << currentFileV1 << currentFileV2 << currentFileV3 << endl;
+	 * e nï¿½o alteraï¿½ï¿½es nos formatos dos arquivos */
+	cout << "Abrindo. VERSï¿½O: " << currentFileDescription << currentFileV1 << currentFileV2 << currentFileV3 << endl;
 	return (currentFileDescription == ("EM Studio [" + AppType + "]") && currentFileV1 == 0 && currentFileV2 == 0) ||
 			(currentFileDescription == ("EM Studio [" + AppType + "]") && currentFileV1 == 0 && currentFileV2 == 1);
 }
@@ -353,17 +353,17 @@ void FileManager::RetrieveElementManagerFromBuffer(InputBuffer& buff, ElementMan
 			e->ReadProperties(buff);
 			project->RegisterElement(e);
 		} else {
-			cout << "Elemento não encontrado!" << endl;
+			cout << "Elemento nï¿½o encontrado!" << endl;
 		}
 	}
 }
 
 void FileManager::RetrieveResultTreeFromBuffer(InputBuffer& buff, ResultTree& resultTree, ResultManager& resultManager, StatusDialog& dialog) {
-	// Recupera o código do projeto
+	// Recupera o cï¿½digo do projeto
 	wxString projectCode = buff.ReadString();
 	resultTree.SetProjectCode(projectCode);
 
-	// Recupera o número de engines
+	// Recupera o nï¿½mero de engines
 	int nEngines = buff.ReadInt();
 
 	for (int i = 0; i < nEngines; i++) {
@@ -372,11 +372,11 @@ void FileManager::RetrieveResultTreeFromBuffer(InputBuffer& buff, ResultTree& re
 		wxString engineName = buff.ReadString();
 		EngineResults engineResults(dtoClassName, engineName);
 
-		// Recupera a quantidade de resultados que a própria Engine tem.
-		// NOTA. ISSO FOI IMPLEMENTADO APENAS APÓS A VERSÃO 0.1.1
-		// Antes dessa versão foi implementado apenas a versão 0.0.1
+		// Recupera a quantidade de resultados que a prï¿½pria Engine tem.
+		// NOTA. ISSO FOI IMPLEMENTADO APENAS APï¿½S A VERSï¿½O 0.1.1
+		// Antes dessa versï¿½o foi implementado apenas a versï¿½o 0.0.1
 		if (!(currentFileV1 == 0 && currentFileV2 == 0 && currentFileV3 == 1)) {
-			cout << "Esse elemento tem resultados próprios" << endl;
+			cout << "Esse elemento tem resultados prï¿½prios" << endl;
 			// Le a quantidade de resultados que este elemento possui
 			int nResults = buff.ReadInt();
 			for (int k = 0; k < nResults; k++) {
@@ -387,7 +387,7 @@ void FileManager::RetrieveResultTreeFromBuffer(InputBuffer& buff, ResultTree& re
 				wxString status = "Loading ";
 				status.Append(resultName).Append(" of ").Append(engineName).Append("...");
 				dialog.SetStatus(status);
-				// Obtém o resultado
+				// Obtï¿½m o resultado
 				ResultSmartPointer result = resultManager.NewResult(resultClassName);
 				if (result != 0) {
 					result->ReadProperties(buff);
@@ -418,7 +418,7 @@ void FileManager::RetrieveResultTreeFromBuffer(InputBuffer& buff, ResultTree& re
 				wxString status = "Loading ";
 				status.Append(resultName).Append(" of ").Append(elementName).Append(" (").Append(engineName).Append(") ...");
 				dialog.SetStatus(status);
-				// Obtém o resultado
+				// Obtï¿½m o resultado
 				ResultSmartPointer result = resultManager.NewResult(resultClassName);
 				if (result != 0) {
 					result->ReadProperties(buff);
@@ -453,7 +453,7 @@ bool FileManager::OpenMaterialLibrary(wxString fileName, MaterialLibrarySmartPoi
 	} catch (BaseTypeIncompatibleException& e) {
 		return false;
 	} catch (exception& e) {
-		cout << "Ocorreu uma exceção: " << e.what() << endl;
+		cout << "Ocorreu uma exceï¿½ï¿½o: " << e.what() << endl;
 	}
 
 	return true;
@@ -481,7 +481,7 @@ bool FileManager::SaveMaterialLibrary(wxString fileName, MaterialLibrary library
 }
 
 bool FileManager::SaveBinaryFile(wxString fileName, Array3D<double>& array) {
-	ofstream file(fileName, ios::out | ios::binary);
+	ofstream file(fileName.ToStdString(), ios::out | ios::binary);
 	if (file.is_open()) {
 		for (int i = 0; i < array.dim1(); i++) {
 			for (int j = 0; j < array.dim2(); j++) {
@@ -498,7 +498,7 @@ bool FileManager::SaveBinaryFile(wxString fileName, Array3D<double>& array) {
 }
 
 bool FileManager::SaveFile(wxString fileName, wxString contents) {
-	ofstream file(fileName, ios::out);
+	ofstream file(fileName.ToStdString(), ios::out);
 	if (file.is_open()) {
 		file << contents;
 		file.close();
@@ -512,7 +512,7 @@ bool FileManager::OpenFile(wxString fileName, wxString& contents) {
 	tictac.Tic("FileManager::OpenFile");
 
 	string line = string();
-	ifstream file(fileName, ios::in);
+	ifstream file(fileName.ToStdString(), ios::in);
 	if (file.is_open()) {
 		while (file.good()) {
 			getline(file, line);
